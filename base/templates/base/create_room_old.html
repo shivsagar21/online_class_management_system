@@ -1,0 +1,18 @@
+<!-- TODO -->
+
+{% include 'teacher_main.html' %}
+
+{% block content %}
+    
+<div class ='progress'>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+{% endblock content %}
+
+</body>
+</html>

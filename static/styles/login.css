@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    
+
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background-image: url("images/40078292.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+  color:white;
+font-weight: bolder;
+   overflow: hidden;
+}
+
+.container ul li{
+    list-style: none;
+}
+.container{
+    display: flex;
+
+}
+.text{
+    /* background-color: aquamarine; */
+    width: 50vw;
+}
+.student,.teacher{
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    
+
+    width: 40vw;
+    
+    row-gap: 5vh;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 5vh; */
+    font-size: 20px;
+}
+.user button{
+    width: 72%;
+   height: 50px;
+   font-size: 25px;
+   color: white;
+   border: none;
+   border-radius: 15px;
+   background-color: #ff1a1a;
+}
+.info{
+    display: flex;
+    gap: 3px;
+}
+#userpassword,#usermail,#userpasswordstudent,#usermailstudent{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 75%;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: larger;
+}
+.icon{
+    position: relative;
+    right: 4.5%;
+}
+h1{
+    text-align: center;
+    position: relative;
+    right: 9%;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6vh;
+}
+.text p{
+    font-size: 2vw;
+}
+
+.text button{
+    padding: 16px;
+    font-size: larger;
+    border: none;
+    color: white;
+    background-color: red;
+      border-radius: 25px;
+      align-items: center;
+}
+.buttonsection{
+    display: flex;
+    gap: 25px;
+}
+button{
+    width: 20vw;
+    position: relative;
+    z-index: +1;
+    
+}
+button::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 25px;
+      z-index: -1;
+      width: 0%;
+      transition:width;
+      transition-duration: 1s;
+}
+button:hover::before{
+    width: 100%;
+}
+
+/* .student{
+
+    transform: translate(0px,-80vh);
+    transition:transform;
+    transition-duration: 2s;
+}
+.teacher{
+
+    transform: translate(0,50vh);
+    transition:transform;
+    transition-duration: 2s;
+} */
+
+
+/* .studentdisplay{
+    transform: translate(0px,24vh);
+} */
+
+/* .teacherdisplay{
+    transform: translate(0px,-20vh);
+} */
+
+.container button{
+    border-bottom: 5px solid blue;
+}
+.container button:focus{
+    border: none;
+}
+
+#newteacher,#newstudent{
+    cursor: pointer;
+}
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+/* @media(max-width:768px){
+    
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .text{
+        width: 90vw;
+        position: relative;
+        top: 30%;
+       
+    }
+    .text p{
+        font-size: 25px;
+    }
+    .student,.teacher{
+        width: 90vw;
+    }
+
+    .student{
+         
+        transform: translate(0px,80vh);
+       
+    }
+    .teacher{
+
+        transform: translate(0,80vh);
+        
+    }
+    
+  
+} */

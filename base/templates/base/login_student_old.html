@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+
+    <h3>Student Login</h3>
+
+    <form class="form" action="" method="POST">
+        {% csrf_token %}
+        <label for="room_name">Email</label>
+        <input id="username" name="email" type="email" placeholder="e.g. harshsharma2024@gmail.com" />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" 
+            placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" />
+        <button type="submit">Login</button>
+    </form>
+
+
+    <p>Haven't Registered yet ??</p>
+    <a href="{% url 'student-register' %}">Register</a>
+
+
+</div>
+
+{% endblock content %}

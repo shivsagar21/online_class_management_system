@@ -1,0 +1,61 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+<div class="progress">
+
+    <style>
+        .room-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+    </style>
+
+    <div class="room-container">
+        <div>
+            <h1>{{room.name}}</h1>
+            <p>{{room.description}}</p>
+            <a href="{% url 'sroom' room.id %}">Chat</a>
+            <a href="#">Assignment</a>
+            <p><a href="#">Lectures</a></p>
+            <a href="#">Files</a>
+            <a href="{% url 'rstudents' room.id %}">Students</a>
+            
+        </div>
+
+        <div>
+
+        <div>
+            <h3>General Chat </h3>
+            <hr>
+
+            {% for message in room_messages %}
+            <div>
+                {% if request.user == message.user %}
+                
+                {% endif %}
+
+                <small>@{{message.user}}  {{message.created|timesince}} ago </small>
+
+                <p>{{message.body}}</p>
+
+                <hr>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" name="body" placeholder="Write your Messages here....">
+
+            </form>
+        </div>
+        {% endif %}
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock content %}

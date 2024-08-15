@@ -1,0 +1,96 @@
+{% include 'teacher_main.html' %}
+
+{% block content %}
+    
+<div class="bigcontainer">
+    <div class="leftcontainer">
+        <div class="classicon">
+            {{ room.name|slice:":2" }}
+        </div>
+       <p>Created {{room.created | timesince}} ago</p>
+       <p>Created By professor {{room.teacher}}</p>
+        <div class="classname">
+            <h1>{{room.name}} </h1>
+        </div>
+        <ul>
+            <li class="opt" style="font-size: 14px;">
+                {{room.description}}
+            </li>
+            <li class="opt">
+               <a href="{% url 'troom' room.id %}"> Chat</a>
+            </li>
+            <li class="opt">
+              <a href="{% url 'tassignments' room.id %}">Assignment</a>
+            </li>
+            <li class="opt">
+             <a href="{% url 'ttest' room.id %}">Test</a>
+            </li>
+            <li class="opt">
+               <a href="{% url 'tfiles' room.id %}">Files</a>
+            </li>
+            <li class="opt">
+                <a href="{% url 'tlectures' room.id %}">Lecture</a>
+            </li>
+            <li class="opt">
+                <a href="{% url 'create_meeting' room.id %}">Live Lecture</a>
+            </li>
+            <li class="opt">
+                <a href="{% url 'trstudents' room.id %}">Students</a>
+            </li>
+            <li class="opt">
+                <a href="{% url 'tasubmission' room.id %}">AssignCheck</a>
+            </li>
+            <li class="opt">
+                <a href="{% url 'ttsubmission' room.id %}">TestCheck</a>
+            </li>
+            <li class="opt">
+                <button onclick="showAlert()">
+                    <a href="{% url 'delete-room' room.id %}" class="btn btn-danger">Delete Room</a>
+                  </button>
+            </li>
+        </ul>
+    
+    </div>
+    <script>
+        function showAlert() {
+            if (confirm("Are you sure you want to delete this room?")) {
+              // The user clicked OK, so do nothing and let the link execute
+            } else {
+              // The user clicked Cancel, so prevent the link from executing
+              event.preventDefault();
+            }
+          }
+    </script>
+
+
+        <div class="rightcontainer">
+         <div class="studentenroalde">
+            <h1>Student Enroled...</h1>
+         </div>
+         <div class="allstudentcontainer">
+
+            {% for student in students %}
+
+            <div class="studentcard">
+                <div class="studentphoto">
+                 <img src="{{student.avatar.url}}" class="studentphoto">
+                </div>
+                <div class="studentname">
+                    <h3>{{student.roll_no}}</h3>
+                </div>
+                <div class="studentmail">
+                    <h3>{{student.name}}</h3>
+                </div>
+                <div>
+                    <h3><a href="mailto: {{student.email}}">{{student.email}}</a></h3>
+                </div>
+            </div>
+            {% endfor %}
+
+
+            
+         </div>
+       </div>
+      
+    
+{% endblock content %}

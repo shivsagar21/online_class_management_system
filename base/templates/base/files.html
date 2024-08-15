@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8357e7b27d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="portal.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ++++++++++++++++++++++++++++OLD PART+++++++++++++++++++++++++++++ -->
+    <div>
+        <div class="nav">
+            <i id="dropdown" class=" dropdown fa-solid fa-bars"></i>
+         <div class="logo"><img src="images/1414305.png"  class="img">
+            <p style="font-size: 45px;">OCMS</p></div>
+    
+            <div class="profile">
+                <img src="images/4430487.png" class="pic">
+                <i class="dropdowm-icon fa-solid fa-caret-down"></i>
+            </div>
+            <div class="update" id="update">
+                <a href="updateprofile.html">Update Profile<i class=" icn fa-solid fa-caret-right"></i></a>
+                <a href="#">Activity<i class="icn fa-solid fa-caret-right"></i></a>
+                <a href="profile.html">Profile<i class="icn fa-solid fa-caret-right"></i></a>
+                <a href="#">Logout<i class="icn fa-solid fa-caret-right"></i></a>
+            </div>
+     
+        </div>
+    
+        </div>
+        <div id="option" class="option">
+          <ul>
+         
+            <!-- <li>
+               <img src="images/1414305.png"  class="img">
+                <p style="font-size: 45px;">OCMS</p>
+            </li> -->
+            <li>
+                <img src="images/2741195.png"  class="img">
+                <p><a href="#">Assignment</a></p>
+            </li>
+            <li>
+                <img src="images/2741195.png"  class="img">
+                <p> <a href="#">Test</a></p>
+            </li>
+            <li>
+                <img src="images/2741195.png"  class="img">
+                <p><a href="joinclass.html"> Class Room</a></p>
+            </li>
+            <li>
+                <img src="images/2741195.png"  class="img">
+                <p><a href="#">Time Table</a></p>
+            </li>
+            <li>
+                <img src="images/2741195.png"  class="img">
+                <p><a href="#">Join Class</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'noticebox' %}">Sent box</a></p>
+            </li>
+              <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'create-notice' %}">Notice</a></p>
+            </li>
+            
+            <li>
+
+                <img src="images/2741195.png"  class="img">
+                <p><a href="createroom.html">Create  Room</a></p>
+            </li>
+            <!-- <li>
+                <img src="images/2741195.png"  class="img">
+                <p><a href="#">Professors</a></p>
+            </li> -->
+            <li>
+                <img src="images/2741195.png"  class="img">
+                <p><a href="#">Students</a></p>
+            </li>
+          </ul>
+          <div id="back" class="back">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+        </div>
+
+
+
+
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++assignment part+++++++++++++++++++++++++++++ -->
+        <div class="bigcontainer">
+            <div class="leftcontainer">
+                <div class="classicon">
+                    AL
+                </div>
+               <p>Created 24 hours ago</p>
+               <p>Created By professor Harh</p>
+                <div class="classname">
+                    <h1>Basic electronics 2023</h1>
+                </div>
+                <ul>
+                    <li class="opt" style="font-size: 14px;">
+                        ABCDEF
+                    </li>
+                    <li>
+                        Chat
+                    </li>
+                    <li class="opt">
+                      <a href="#">Assignment</a>
+                    </li>
+                    <li class="opt">
+                     <a href="#">Test</a>
+                    </li>
+                    <li class="opt">
+                       <a href="#">Files</a>
+                    </li>
+                    <li class="opt">
+                        <a href="#">Lecture</a>
+                    </li>
+                    <li class="opt">
+                        <a href="#">Students</a>
+                    </li>
+                </ul>
+            
+            </div>
+    
+    
+            <div class="assrightcontainer">
+                <h1>ASSIGNMENT...</h1>
+                <div class="assignmentnavbar">
+                    <p>Sl.no</p>
+                    <p>NAME</p>
+                    <p>Updated By</p>
+                    <p>Updated At</p>
+               
+                    <p>Download</p>
+              
+                 
+                </div>
+                <div class="assignmentwrapper">
+                <div class="assignment">
+                    <p>1</p>
+                    <p>Assignment 1</p>
+                    <p>Harsh Sharma</p>
+                  
+                    <p>06/04/2023</p>
+                     <button><a href="images\async and await.pdf" download="">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+                
+                </div>
+
+
+                <div class="assignment">
+                    <p>1</p>
+                    <p>Assignment 1</p>
+                    <p>Harsh Sharma</p>
+                    
+                    <p>06/04/2023</p>
+                     <button><a href="images\async and await.pdf" download="">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+                   
+                </div>
+
+                <div class="assignment">
+                    <p>1</p>
+                    <p>Assignment 1</p>
+                    <p>Harsh Sharma</p>
+                    
+                    <p>06/04/2023</p>
+                     <button><a href="images\async and await.pdf" download="">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+                  
+                </div>
+
+
+                <div class="assignment">
+                    <p>1</p>
+                    <p>Assignment 1</p>
+                    <p>Harsh Sharma</p>
+                
+                    <p>06/04/2023</p>
+                     <button><a href="images\async and await.pdf" download="">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+                 
+                </div>
+
+
+                <div class="assignment">
+                    <p>1</p>
+                    <p>Assignment 1</p>
+                    <p>Harsh Sharma</p>
+                  
+                    <p>06/04/2023</p>
+                     <button><a href="images\async and await.pdf" download="">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+             
+                </div>
+
+
+                <div class="assignment">
+                    <p>1</p>
+                    <p>Assignment 1</p>
+                    <p>Harsh Sharma</p>
+               
+                    <p>06/04/2023</p>
+                     <button><a href="images\async and await.pdf" download="">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+                    
+                </div>
+                <button id="uploadassignment">Upload Assignment</button>
+                </div>
+           </div>
+          
+    
+    
+    <script src="portal.js"></script>
+    
+</body>
+</html>

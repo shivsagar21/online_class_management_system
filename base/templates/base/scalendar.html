@@ -1,0 +1,22 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+
+<div class="calender">
+    <h1>CALENDER MEETING</h1>
+    {% for meeting in meetings %}
+    <div class="calenderinfo">
+        <h4>{{meeting.start_time}}</h4>
+        <div class="time">
+            <p>Meet {{meeting.name}} in Room <a href="{% url 'sroom' meeting.room.id %}">{{meeting.room.name}}</a></p>
+            <p>{{meeting.start_time}}</p>
+            <p>{{meeting.end_time}}</p>
+            <a href={{meeting.link}}><button>JOIN</button></a>
+            
+        </div>
+    </div>
+
+    {% endfor %}
+       </div>
+
+{% endblock content %}

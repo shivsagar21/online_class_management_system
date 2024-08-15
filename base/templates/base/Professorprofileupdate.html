@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8357e7b27d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/Professorupdateprofile.css' %}">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="nav">
+        <i id="dropdown" class=" dropdown fa-solid fa-bars"></i>
+     <div class="logo"><img src="{% static 'images/1414305.png' %}" class="img">
+        <p style="font-size: 45px;">OCMS</p></div>
+        
+
+        <div class="profile">
+            <img src="{% static 'images/4430487.png' %}" class="pic">
+            <i class="dropdowm-icon fa-solid fa-caret-down"></i>
+        </div>
+        <div class="update" id="update">
+            <a href="{% url 'Professorprofileupdate' %}">Update Profile<i class=" icn fa-solid fa-caret-right"></i></a>
+            <a href="{% url 'tactivity' %}">Activity<i class="icn fa-solid fa-caret-right"></i></a>
+            <a href="{% url 'ProfessorProfile' %}">Profile<i class="icn fa-solid fa-caret-right"></i></a>
+            <a href="{% url 'logout-student' %}">Logout<i class="icn fa-solid fa-caret-right"></i></a>
+        </div>
+    </div>
+
+    <!-- <p> <h1> Website under Work !!!</h1></p> -->
+    
+    <div id="option" class="option">
+        <ul>
+     
+            <!-- <li>
+               <img src="images/1414305.png"  class="img">
+                <p style="font-size: 45px;">OCMS</p>
+            </li> -->
+            
+            
+            <li>
+                <img src=""  class="img">
+                <p></p>
+            </li>
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'teacher-room' %}">Class Rooms</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'tcalendar' %}">Calendar</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'noticebox' %}">Sent box</a></p>
+            </li>
+              <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'create-notice' %}">Notice</a></p>
+            </li>
+            
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'create-room' %}">Create  Room</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'professors' %}">Professors</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/2741195.png' %}"  class="img">
+                <p><a href="{% url 'tallstudents' %}">Students</a></p>
+            </li>
+          </ul>
+      <div id="back" class="back">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+    </div>
+
+    <form method="post" action="" enctype="multipart/form-data" >
+     {% csrf_token %}
+   <div class="wrapper7">
+    
+       <div class="content">
+           <div class="line1">
+           <div class="iconcontainer">
+               <i class="fa-solid fa-pen-to-square fa-beat"></i>
+           </div>
+           <h1>Update Profile</h1>
+       </div>
+ 
+       <div class="herocontainer">
+       <div class="leftpart">
+           <img src="{{img.url}}" class="userpic">
+           <input type="file" name='img' value="{{img}}">
+           <label for="bio">Bio:</label>
+
+           <textarea class="bio" rows="5" columns="8" name='bio' value="{{bio}}">{{bio}}</textarea>
+       </div>
+       <div class="rightpart">
+         <ul>
+           <li>
+              <label for="name">Name:</label>
+              <input type="text" class="name" name='name'  value="{{name}}" required >
+           </li>
+           <li>
+               <label for="mail">Mail-id:</label>
+               <input type="email" class="mail" name='email' value="{{mail_id}}" required>
+           </li>
+           <li>
+               <label for="dept">Department:</label>
+               <input type="text" class="dept" name='dep' value="{{Dep}}" required>
+           </li>
+           <li>
+               <label for="mobile">Mobile:</label>
+               <input type="number" class="mobile"  name='phone' value="{{phone}}" required>
+           </li>
+           <li>
+               <label for="web">Website:</label>
+               <input type="text" class="website" name='website' value="{{website}}"  required>
+               <!-- <label for="roll_no">Roll No:</label>
+               <input type="text" class="roll_no" required> -->
+           </li>
+           
+         </ul>
+       </div>
+       </div>
+       
+       <button type="submit" id="updatebn" >Update Profile</button>
+       <button id="canbn" ><a href="{% url 'teacher-room' %}">Cancel</a></button>
+       <button  id="refresh"><a href="{% url 'Professorprofileupdate' %}">Refresh</a></button>
+       </div>
+    </div>
+   </form>
+
+
+
+
+
+
+
+<script src="{% static 'js/portal.js' %}"></script>
+<script>
+  
+    document.getElementById("updatebn").addEventListner("click",()=>{
+        
+    
+           
+                
+                    location.reload();
+                    setTimeout(function() {
+                        location.reload();
+                    }, 1000);
+                
+               
+        
+    })
+</script>
+
+</body>
+</html>

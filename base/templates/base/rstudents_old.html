@@ -1,0 +1,45 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+<div class="progress">
+
+    <style>
+        .room-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+    </style>
+
+    <div class="room-container">
+        <div>
+            <h1>{{room.name}}</h1>
+            <p>{{room.description}}</p>
+            <a href="{% url 'sroom' room.id %}">Chat</a>
+            <a href="#">Assignment</a>
+            <p><a href="#">Lectures</a></p>
+            <a href="#">Files</a>
+            <a href="{% url 'rstudents' room.id %}">Students</a>
+            
+        </div>
+
+        <div>
+
+
+            <h1>Enrolled Students in Class {{room.name}}</h1>
+
+            {% for student in students %}
+            <div>
+                <p>{{student.name}}</p>
+                <p>{{student.roll_no}}</p>
+                <p>{{student.department}}</p>
+                <p>{{student.email}}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock content %}

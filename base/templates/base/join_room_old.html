@@ -1,0 +1,30 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+
+
+    <div class="progress">
+    {% for room in rooms %}
+
+    <div>
+        <p>{{room.avatar}}</p>
+        <p>{{room.name}}</p>
+        <p>{{room.teacher}}</p>
+        <p>{{room.room_id}}</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="room_id" value="{{ room.id }}">
+            
+            <input id="room_code" name="code" placeholder="Class Code" />
+        <button type="submit">Join</button>
+        </form>
+
+    </div>
+
+    
+
+    {% endfor %}
+
+    </div>
+
+{% endblock content %}

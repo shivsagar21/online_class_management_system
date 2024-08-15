@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .room-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+</style>
+
+<div class="room-container progress">
+
+    <div>
+        <h1>{{room.name}}</h1>
+        <p>{{room.description}}</p>
+        <p><a href="#">Lectures</a></p>
+        <a href="#">Files</a>
+        <a href="#">Enrolled Students</a>
+    </div>
+
+    <div>
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+    
+</div>
+
+    {% endblock content %}    

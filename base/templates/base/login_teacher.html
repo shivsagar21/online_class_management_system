@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8357e7b27d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}" />
+    <title>Login</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+    
+        <div class="container">
+
+            <div class="text">
+                <p class="auto"></p>
+                <p>Choose Your Role:</p>
+                <div class="buttonsection">
+                    <button id="studentclick"><a href="{% url 'student-login' %}">Student</a></button>
+                    <button id="teacherclick"><a href="{% url 'teacher-login' %}">Teacher</a></button>
+                </div>
+            </div>
+            <div class="user">
+             <div id="student" class="student">
+            <h1>Teacher Login</h1>
+          <ul>
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>Username:</p>
+                <input type="text" name="username" placeholder="Enter your username">
+                <br>
+                <br>
+                <p>Password:</p>
+                <input type="password" name="password" placeholder="Enter password">
+                <br>
+                <br>
+                <button> <input type="submit" name="" value="Login"></button>
+              </form>
+                
+                <div class="info">
+                    
+                 <P id="newstudent"><a href="{% url 'teacher-register' %}">Not Registered ?</a></P>
+                 </div>
+             </li>
+          </ul>
+          
+  
+           </div>
+
+
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        var typed=new Typed(".auto",{
+            strings:["Welcome To Online Learning Portal"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop:true
+        })
+
+    </script>
+    <!-- <script src="login.js"></script> -->
+</body>
+</html>

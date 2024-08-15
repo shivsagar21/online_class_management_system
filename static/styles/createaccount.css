@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    
+
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background-image: url("images/40078292.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   color: white;
+   font-weight: 900;
+   overflow: hidden;
+}
+/* .otp input{
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    font-size: larger;
+    
+} */
+.container{
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.left h1,span{
+   animation-name:styling;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+@keyframes styling{
+    0%{
+        color: yellow;
+    }
+    50%{
+        color: red;
+    }
+    100%{
+        color:white;
+    }
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 30vw;
+    font-size:3.5vh;
+    padding: 3.5vh;
+  
+    border-radius: 16px;
+}
+
+.mail,.userpass,.confirmpassword,.mobilenumber,.name{
+    display: flex;
+    flex-direction: column;
+}
+.right ul div input{
+    padding: 1.5vh;
+    border:none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid blue;
+    border-radius: 16px;
+    color: white;
+    font-weight: 900;
+    /* font-size: larger; */
+}
+.type li{
+    list-style: none;
+}
+.type ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.otp {
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transition:opacity;
+    transition-duration:1s;
+}
+.display{
+    opacity: 1;
+}
+
+/* .otp input{
+    
+    border:none;
+    outline: none;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+} */
+.buttons{
+     padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+ 
+}
+.right button{
+    padding: 8px;
+   border: none;
+   color: white;
+   background-color: red;
+}
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+        
+    }
+    .right{
+        width: 95vw;
+    }
+}

@@ -1,0 +1,16 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+
+    <div class="progress">
+    {% for message in messages %}
+        <div>
+            <p>
+            @{{message.user}}  {{message.created|timesince}} ago</p>
+            <p>Chats in Room {{message.room.name}}</p>
+            <p>{{message.body}}</p>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock content %}

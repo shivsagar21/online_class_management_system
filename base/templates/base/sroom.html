@@ -1,0 +1,78 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+    
+       <div class="bigcontainer">
+        <div class="leftcontainer">
+            <div class="classicon">
+                {{ room.name|slice:":2" }}
+            </div>
+           <p>Created {{room.created | timesince}} ago</p>
+           <p>Created By professor {{room.teacher}}</p>
+            <div class="classname">
+                <h1>{{room.name}} </h1>
+            </div>
+            <ul>
+                <li class="opt" style="font-size: 14px;">
+                    {{room.description}}
+                </li>
+                <li class="opt">
+                    <a href="{% url 'sroom' room.id %}">Chat</a>
+                </li>
+                <li class="opt">
+                  <a href="{% url 'sassignments' room.id %}">Assignment</a>
+                </li>
+                <li class="opt">
+                 <a href="{% url 'stest' room.id %}">Test</a>
+                </li>
+                <li class="opt">
+                   <a href="{% url 'sfiles' room.id %}">Files</a>
+                </li>
+                <li class="opt">
+                    <a href="{% url 'slectures' room.id %}">Lecture</a>
+                </li>
+                <li class="opt">
+                    <a href="{% url 'rstudents' room.id %}">Students</a>
+                </li>
+            </ul>
+        
+        </div>
+
+
+        <div class="rightcontainer">
+            <div class="rightnav">
+            <i class="fa-solid fa-message-dots fa-beat"></i>
+            <h2>General Chat</h2>
+        </div>
+        <div class="messagebox">
+            {% for message in room_messages %}
+            
+                {% if request.user == message.user %}
+                
+                {% endif %}
+            <div class="mes">
+              <div class="messager">
+                <p>@{{message.user}}</p>
+                <p>{{message.created | timesince}} ago</p>
+              </div>
+              <p>{{message.body}}</p>
+              
+        </div>
+        {% endfor %}
+
+        
+        <div class="mesinput">
+            {% if request.user.is_authenticated %}
+            <form method="POST" action="">
+                {% csrf_token %}
+            <input type="text" name="body" class="mesginputforchat" placeholder="Type your message....">
+            <i style="font-size: larger;" class="fa-brands fa-telegram"></i>
+            </form>
+            {% endif %}
+           </div>
+       </div>
+      
+    
+       
+
+{% endblock content %}

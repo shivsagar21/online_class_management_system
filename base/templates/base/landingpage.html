@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8357e7b27d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <nav>
+            <div class="logo">
+                <h1>OCMS</h1>
+            </div>
+            <div class="right">
+               <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#features">Features</a>
+                </li>
+               </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="herosection">
+        <div class="heroleft">
+            <p class="text">
+              Effective <br> Learning
+            </p>
+            <Span class="autotext"></Span>
+            <button>
+                <a href="{% url 'check' %}">Get Started</a>
+               
+            </button>
+        </div>
+        <div class="heroright">
+
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="features" id="features">
+        <div class="message">
+            <h1>FEATURES</h1>
+            <p>"e-learning doesn't just "happen"! it requires carefull planning and implementation.</p>
+        </div>
+           <div class="cardsection">
+            <div class="card1 card">
+               <img style ='max-width: 100px' src="images/check2.svg" class="im">
+               <h2>EDUCATION</h2>
+               <P>
+                Encourages educators to use online teaching tools for creating a new methodology of teaching which focuses on involvement
+               </P>
+
+            </div>
+            <div class="card2 card">
+                <img style ='max-width: 100px' src="images/2741195.png" class="im">
+                <h2>Learning</h2>
+                <P>
+                    Online assignments can take many forms, from quizzes and tests to essays and research projects. One of the benefits of online assignments is that they can be completed from
+                </P>
+                
+            </div>
+            <div class="card3 card">
+                <img src="images/3534031.png" class="im">
+                <h2>Instruction</h2>
+                <P>
+                    A single place for all <br> Educators can interact with their students through various channels for effective communication and doubt solving  
+                </P>
+                
+            </div>
+            <div class="card4 card">
+                <img src="images/4430487.png" class="im">
+                <h2>Training</h2>
+                <P>
+                 
+Encourages educators to use online teaching tools for creating a new methodology <br> of teaching which focuses on involvement
+
+Around-the-clock support is provided. 
+                </P>
+                
+            </div>
+            <div class="card5 card">
+                <img src="images/5585225.png" class="im">
+                <h2>Tutoring</h2>
+                <P>
+                    Encourages educators to use online teaching tools for creating a new methodology of teaching which focuses on involvement
+                </P>
+                
+            </div>
+            <div class="card6 card">
+                <img src="images/images.png" class="im">
+                <h2>Pedagogy</h2>
+                <P>
+                    Encourages educators to use online teaching tools for creating a new methodology of teaching which focuses on involvement
+                </P>
+                
+            </div>
+           </div>
+          </div>
+    </section>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js">
+
+    </script>
+    <script>
+
+        var typed=new Typed(".autotext",{
+            strings:["With Online Classroom"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop:true
+        })
+
+    </script>
+      <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

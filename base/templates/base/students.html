@@ -1,0 +1,36 @@
+{% include 'student_main.html' %}
+
+
+
+{% block content %}
+<div class="allstudentlist">
+    <div class="studentenroaled">
+       <h1>Student Enrolled...</h1>
+    </div>
+    <div class="allstudentlistcontainer">
+
+        {% for student in students %}
+       <div class="studentcard">
+           <div class="studentphoto">
+            <img src="{{student.avatar.url}}" class="studentphoto">
+           </div>
+           <div>
+               <h3>{{student.roll_no}}</h3>
+           </div>
+           <div class="studentname">
+               <h3>{{student.name}}</h3>
+           </div>
+           <div class="studentmail">
+               <h3><a href="mailto:{{student.email}}">{{student.email}}</a></h3>
+           </div>
+           
+       </div>
+
+       {% endfor %}
+     
+       </div>
+    </div>
+  
+{% endblock content %}
+
+

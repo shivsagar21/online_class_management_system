@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.option{
+    height:90vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+  
+    background-color: rgb(34, 34, 99);
+    color: white;
+  position: relative;
+  top: 10vh;
+
+  height: 0;
+  overflow: hidden;
+  transition: all;
+  transition-duration: 1.5s;
+}
+.option ul{
+    display: flex;
+
+    flex-direction: column;
+    row-gap: 5vh;
+}
+.option li{
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    font-size: 25px;
+}
+.option ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    opacity: 0.7;
+}
+.back{
+    font-size: 35px;
+    position: absolute;
+    bottom: 0;
+    /* bottom: 10px; */
+    left:45px;
+    transform: rotate(90deg);
+    
+}
+
+.show{
+  height: 90vh;
+}
+
+.img{
+    height: 45px;
+}
+.nav{
+
+    width: 100vw;
+    height: 10vh;
+    background-color:rgb(34, 34, 99);
+    position: absolute;
+   
+    /* left: 20vw; */
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.nav input{
+    border: none;
+    outline: none;
+   background: transparent;
+   color: white;
+   font-size: larger;
+
+}
+.pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.search{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 14px;
+    
+}
+.icon{
+    font-size: 25px;
+    color: white;
+    position: relative;
+    left: 5px;
+}
+
+.update{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    
+   background-color: rgb(34, 34, 99);
+   padding: 16px;
+   position: absolute;
+   top:100%;
+   right:15px;
+    transform: scale(0);
+  overflow: hidden;
+  transition:all;
+  transition-duration: 1s;
+}
+.update a{
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+    
+}
+
+.display{
+transform: scale(1);
+}
+.dropdowm-icon{
+    position: relative;
+    bottom:3px;
+    font-size: 29px;
+    color: white;
+}
+.icn{
+    font-size: larger;
+    position: absolute;
+    right: 3px;
+}
+.logo{
+    display: flex;
+}
+
+.dropdown{
+    font-size: 25px;
+}
+
+
+
+.wrapper7{
+    position: fixed;
+    top:15vh;
+    left:20vw;
+    background-color: #00ace6;
+   height: fit-content;
+   padding: 25px;
+   border-radius: 25px;
+   width: 60vw;
+  
+ }
+ 
+ .userpic{
+     height: 150px;
+     width: 150px;
+     /* border-radius: 50%; */
+ }
+ .iconcontainer{
+     height: 40px;
+     width: 40px;
+     background-color: blue;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .iconcontainer{
+     color:white
+ }
+ .line1{
+     display: flex;
+     gap:10px;
+     padding-bottom: 5px;
+     border-bottom: 1px solid black;
+ }
+ .content{
+     display: flex;
+     flex-direction: column;
+     row-gap: 10px;
+     background-color: white;
+     padding:19px;
+     margin-left: 20px;
+     margin-right: 20px;
+    
+ }
+ .herocontainer{
+     display: flex;
+     gap:20px;
+     justify-content: space-around;
+ }
+ 
+ .leftpart{
+     display: flex;
+     flex-direction: column;
+     row-gap: 10px;
+ }
+
+
+ #updatebn,#canbn,#refresh{
+     color:white;
+     border:none;
+     padding: 5px;
+     /* font-size: larger; */
+     background-color: blue;
+     border-radius: 7px;
+ }
+ #canbn{
+     background-color: red;
+ }
+
+ #canbn a{
+     text-decoration: none;
+     color:white;
+ }
+ #refresh a{
+    text-decoration: none;
+    color:white;
+}
+ .rightpart ul li{
+     list-style: none;
+     font-size: larger;
+ 
+     padding: 6px;
+     opacity: 0.8;
+     
+ 
+ }
+ .rightpart ul{
+     display: flex;
+     flex-direction: column;
+     row-gap: 20px;
+ }
+ li{
+     display: flex;
+     gap:5px;
+ }
+ 
+ 
+ .a{
+     text-decoration: none;
+     color: white;
+ }
+ .rightpart ul li input{
+     border: none;
+     /* border-bottom:2px solid black; */
+     outline:none;
+     background: transparent;
+     border:2px solid black;
+     border-radius: 10px;
+ }
+ .bio{
+     outline: none;
+     border: 2px solid black;
+ }
+
+

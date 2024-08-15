@@ -1,0 +1,35 @@
+{% include 'teacher_main.html' %}
+
+
+
+{% block content %}
+
+<div class="allstudentlist">
+    <div class="studentenroaled">
+       <h1>Professors</h1>
+    </div>
+    <div class="allstudentlistcontainer">
+
+       {% for professor in professors %}
+       <div class="studentcard">
+           <div class="studentphoto">
+            <img src="{{professor.avatar.url}}" class="studentphoto">
+           </div>
+           <div class="studentname">
+               <h3>{{professor.name}}</h3>
+           </div>
+           <div class="studentmail">
+               <h3><a href="mailto:{{professor.email}}">{{professor.email}}</a></h3>
+           </div>
+           <div class="studentmail">
+            <h3><a href="{{professor.websitelink}}">{{professor.websitelink}}</a></h3>
+        </div>
+           
+       </div>
+       {% endfor %}
+      
+
+   </div>
+    </div>
+
+{% endblock content %}

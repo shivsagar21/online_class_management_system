@@ -1,0 +1,76 @@
+{% include 'student_main.html' %}
+
+{% block content %}
+    
+       <div class="bigcontainer">
+        <div class="leftcontainer">
+            <div class="classicon">
+                {{ room.name|slice:":2" }}
+            </div>
+           <p>Created {{room.created | timesince}} ago</p>
+           <p>Created By professor {{room.teacher}}</p>
+            <div class="classname">
+                <h1>{{room.name}} </h1>
+            </div>
+            <ul>
+                <li class="opt" style="font-size: 14px;">
+                    {{room.description}}
+                </li>
+                <li class="opt">
+                    <a href="{% url 'sroom' room.id %}">Chat</a>
+                </li>
+                <li class="opt">
+                  <a href="{% url 'sassignments' room.id %}">Assignment</a>
+                </li>
+                <li class="opt">
+                 <a href="{% url 'stest' room.id %}">Test</a>
+                </li>
+                <li class="opt">
+                   <a href="{% url 'sfiles' room.id %}">Files</a>
+                </li>
+                <li class="opt">
+                    <a href="{% url 'slectures' room.id %}">Lecture</a>
+                </li>
+                <li class="opt">
+                    <a href="{% url 'rstudents' room.id %}">Students</a>
+                </li>
+            </ul>
+        
+        </div>
+
+
+        <div class="assrightcontainer">
+            <h1>Class Files</h1>
+            <div class="assignmentnavbar">
+                <p>Sl.no</p>
+                <p>NAME</p>
+                <p>Updated By</p>
+                <p>Updated At</p>
+                <p>Preview</p>
+           
+                <p>Download</p>
+          
+             
+            </div>
+            <div class="assignmentwrapper">
+    
+            {% for file in files %}
+    
+            <div class="assignment">
+                <p>{{file.id}}</p>
+                <p>{{file.name}}</p>
+                <p>{{file.uploaded_by}}</p>
+              
+                <p>{{file.uploaded_at}}</p>
+                <button><a href="{{ file.file.url }}" target="_blank">Preview</a></button>
+
+                 <button><a href="{{ file.get_absolute_url }}">Download&nbsp;&nbsp;<i class="fa-solid fa-download fa-beat"></i></a></button>
+            
+            </div>
+    
+            {% endfor %}
+      
+    
+       
+
+{% endblock content %}

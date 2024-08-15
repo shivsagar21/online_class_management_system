@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8357e7b27d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/join_room.css' %}">
+    <title>Document</title>
+    {% comment %} <style>
+        
+        .classinfo:hover{
+            translate:scaleX(4);
+        }
+    </style> {% endcomment %}
+</head>
+<body>
+    <div class="wrapper">
+    <div class="nav">
+        <i id="dropdown" class=" dropdown fa-solid fa-bars"></i>
+     <div class="logo"><img src="{% static 'images/1414305.png' %}" class="img">
+        <p style="font-size: 45px;">OCMS</p></div>
+        <div class="search">
+        <i class=" icon fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search for.....">
+       
+        </div>
+
+        <div class="profile">
+            <img src="{% static 'images/4430487.png' %}" class="pic">
+            <i class="dropdowm-icon fa-solid fa-caret-down"></i>
+        </div>
+        <div class="update" id="update">
+            <a href="{% url 'studentprofileupdate' %}">Update Profile<i class=" icn fa-solid fa-caret-right"></i></a>
+            <a href="{% url 'sactivity' %}">Activity<i class="icn fa-solid fa-caret-right"></i></a>
+            <a href="{% url 'studentProfile' %}">Profile<i class="icn fa-solid fa-caret-right"></i></a>
+            <a href="{% url 'logout-student' %}">Logout<i class="icn fa-solid fa-caret-right"></i></a>
+        </div>
+    </div>
+
+    <!-- <p> <h1> Website under Work !!!</h1></p> -->
+    
+    <div id="option" class="option">
+      <ul>
+     
+       
+
+        <li>
+            <img src=""  class="img">
+            <p></p>
+        </li>
+        
+        <li>
+            <img src="{% static 'images/2741195.png' %}"  class="img">
+            <p><a href="{% url 'student-room' %}">Class Room</a></p>
+        </li>
+        <li>
+            <img src="{% static 'images/2741195.png' %}"  class="img">
+            <p><a href="{% url 'scalendar' %}">Calendar</a></p>
+        </li>
+         <li>
+            <img src="{% static 'images/2741195.png' %}"  class="img">
+            <p><a href="{% url 'snotice_box' %}">Notice box</a></p>
+        </li> 
+        
+        
+        <li>
+            <img src="{% static 'images/2741195.png' %}"  class="img">
+            <p><a href="{% url 'join' %}">Join Class</a></p>
+        </li>
+        <li>
+            <img src="{% static 'images/2741195.png' %}"  class="img">
+            <p><a href="{% url 'students' %}">Students</a></p>
+        </li>
+      </ul>
+      <div id="back" class="back">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+    </div>
+</div>
+
+<div class="wrapper2">
+    <h1 class="noticehead">....NOTICES....</h1>
+    <div id="classinfo" class="noticeinfo">
+
+        {% for notice in notices %}
+        <div  class="noticebox">
+
+            <div class="nnn">
+{% comment %}                 
+                <p>notice sent {{notice.created | timesince}} ago</p> {% endcomment %}
+              
+                
+                 <p class="nm">  <br><p class="time">notice sent {{notice.created | timesince}} ago</p><br>{{ notice.description }}</p>
+             </div>
+            
+              
+          
+        </div>
+        {% endfor %}
+
+
+        
+    </div>
+</div>
+
+<script src="{% static 'js/portal.js' %}"></script>
+
+</body>
+</html>

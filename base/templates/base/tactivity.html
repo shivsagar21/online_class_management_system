@@ -1,0 +1,34 @@
+{% include 'teacher_main.html' %}
+
+{% block content %}
+
+
+    <div class="activitycontainer">
+        <h1>Recent Activity....</h1>
+        <div class="activitybox">
+            
+            {% for message in messages %}
+
+               <div class="activitycontent">
+                <div class="activityl1">
+                <p>@{{message.user}}</p>
+                <p>{{message.created}}</p>
+             
+                </div>
+                <p class="chatroom">Chats in Room {{message.room.name}}</p>
+                <br>
+                <p>{{message.body}}</p>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+
+    
+    {% endblock content %}
+
+
+
+<script src="portal.js"></script>
+</body>
+</html>
